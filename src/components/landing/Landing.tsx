@@ -585,7 +585,8 @@ function SampleLabel({ children = "Sample Member Story" }: { children?: ReactNod
 }
 
 function Stories() {
-  const [feat, ...rest] = stories;
+  const feat = stories[0]!;
+  const rest = stories.slice(1);
   return (
     <section className="bg-background py-24 md:py-36">
       <div className="mx-auto max-w-[1400px] px-5 md:px-10">
